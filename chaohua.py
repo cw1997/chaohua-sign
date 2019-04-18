@@ -25,7 +25,7 @@ def weibo_login(session, username, password):
     r = session.post(login_api, data=data, headers=headers)
     print(r.text)
     ret_json = json.loads(r.text)
-    print(ret_json)
+    # print(ret_json)
     # sso login all domain(weibo.com and sina.com.cn)
     crossdomainlist = ret_json['data']['crossdomainlist']
     for i in crossdomainlist:
